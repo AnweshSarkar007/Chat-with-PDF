@@ -53,5 +53,4 @@ Start the Streamlit server by running:
 
 Bash
 streamlit run app.py
-💡 How It Works
 
