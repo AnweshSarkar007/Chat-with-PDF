@@ -1,56 +1,141 @@
-📄 Ask Your Document - Multi-Document ChatBot
-A powerful, conversational AI application that allows users to upload multiple documents (PDF, DOCX, TXT) and have interactive conversations about their content. This app leverages LangChain, Groq (Llama 3), and FAISS for efficient retrieval and intelligent responses.
 
-🚀 Features
-Multi-Format Support: Upload and analyze .pdf, .docx, and .txt files simultaneously.
+# 📄 Ask Your Document
 
-Conversational Memory: Remembers previous interactions for a natural chat experience.
+### Multi-Document Conversational Chatbot
 
-High Performance: Powered by the Llama3-70b model via Groq for near-instant responses.
+**Ask Your Document** is an intelligent, conversational AI application that lets users upload **multiple documents** and chat with them in real time.
+It supports **PDF, DOCX, and TXT** files and delivers fast, accurate answers using **state-of-the-art LLMs and vector search**.
 
-Local Vector Storage: Uses FAISS for fast and efficient document similarity search.
+Built for speed, simplicity, and scalability 🚀
 
-User-Friendly Interface: Built with Streamlit for a sleek, responsive UI.
+---
 
-🛠️ Tech Stack
-Frontend: Streamlit
+## ✨ Key Features
 
-LLM Orchestration: LangChain
+* 📚 **Multi-Document Support**
+  Upload and query multiple files at once (`.pdf`, `.docx`, `.txt`).
 
-LLM: Groq (Llama 3 70B)
+* 💬 **Conversational Memory**
+  Maintains chat history for natural, context-aware conversations.
 
-Embeddings: HuggingFace (all-MiniLM-L6-v2)
+* ⚡ **High-Performance LLM**
+  Powered by **Llama 3 (70B)** via **Groq** for ultra-fast responses.
 
-Vector Database: FAISS
+* 🔍 **Semantic Search with FAISS**
+  Efficient document retrieval using local vector similarity search.
 
-Document Parsing: PyPDF2, docx2txt
+* 🧠 **Accurate Embeddings**
+  Uses HuggingFace’s `all-MiniLM-L6-v2` for high-quality embeddings.
 
-📋 Prerequisites
-Before running the project, ensure you have:
+* 🎨 **Clean & Interactive UI**
+  Built with **Streamlit** for a smooth user experience.
 
-Python 3.9+ installed.
+---
 
-A Groq API Key (Get it at console.groq.com).
+## 🧰 Tech Stack
 
-⚙️ Installation & Setup
-Clone the repository:
+| Layer                | Technology                       |
+| -------------------- | -------------------------------- |
+| Frontend             | Streamlit                        |
+| LLM Orchestration    | LangChain                        |
+| Large Language Model | Groq 	                          |
+| Embeddings           | HuggingFace                      |
+| Vector Database      | FAISS                            |
+| Document Parsing     | PyPDF2, docx2txt                 |
 
-Bash
+---
+
+## 📦 Supported File Types
+
+* 📄 PDF (`.pdf`)
+* 📝 Word Documents (`.docx`)
+* 📃 Text Files (`.txt`)
+
+---
+
+## 🔧 Prerequisites
+
+Make sure you have:
+
+* **Python 3.9+**
+* **Groq API Key**
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-Install dependencies:
+```
 
-Bash
+### 2️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Set up Secrets: Create a .streamlit/secrets.toml file in the root directory and add your Groq API key:
+```
 
-Ini, TOML
+### 3️⃣ Configure API Key
+
+Create a secrets file:
+
+```bash
+.streamlit/secrets.toml
+```
+
+Add your Groq API key:
+
+```toml
 GROQ_API_KEY = "your_groq_api_key_here"
-Alternatively, you can set it as an environment variable.
+```
 
-🏃 Running the App
-Start the Streamlit server by running:
+👉 Alternatively, you can set it as an environment variable:
 
-Bash
+```bash
+export GROQ_API_KEY="your_groq_api_key_here"
+```
+
+---
+
+## ▶️ Running the Application
+
+Start the Streamlit app with:
+
+```bash
 streamlit run app.py
+```
+
+Once running, open your browser and start chatting with your documents 🎉
+
+---
+
+## 🧠 How It Works
+
+1️⃣ **Upload Documents**
+Users upload one or more documents via the sidebar.
+
+2️⃣ **Text Extraction**
+Content is extracted using format-specific loaders.
+
+3️⃣ **Chunking**
+Text is split into smaller, manageable chunks.
+
+4️⃣ **Embedding Generation**
+Each chunk is converted into vectors using HuggingFace embeddings.
+
+5️⃣ **Vector Storage**
+Embeddings are stored locally using FAISS.
+
+6️⃣ **Question Answering**
+User queries are matched semantically and answered using Llama 3.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
 
